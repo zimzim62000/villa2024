@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'app.instagramsettings.title'|trans }} • {{ 'app.index.title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="mt-5">{{ 'app.instagramsettings.settings'|trans }} <img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-File.png" style="height: 50px; width: 50px"/></h1>
+
+                <div class="mt-4">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        {{ form_row(form.accountId, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="form-group" style="margin-bottom: 10px">
+                        {{ form_row(form.accessToken, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mt-5">
+                    <h2>{{ 'app.instagramsettings.links'|trans }}🔗</h2>
+                    <div class="d-flex justify-content-center">
+                        <div class="text-center">
+                            <p>{{ 'app.instagramsettings.apigraphusecase'|trans }}</p>
+                            <a class="btn btn-primary btn-custom" href="https://developers.facebook.com/tools/explorer/">{{ 'app.instagramsettings.apigraph'|trans }}</a>
+                        </div>
+                        <div class="separator mx-3 border-end"></div>
+                        <div class="text-center">
+                            <p>{{ 'app.instagramsettings.debugaccesstokenusecase'|trans }}</p>
+                            <a class="btn btn-primary btn-custom" href="https://developers.facebook.com/tools/debug/accesstoken/">{{ 'app.instagramsettings.debugaccesstoken'|trans }}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h2>{{ 'app.instagramsettings.currentvalues'|trans }}</h2>
+                    <p>{{ 'app.instagramsettings.formaccountid'|trans }}: {{ instagramCurrentAccountId }}</p>
+                    <p>{{ 'app.instagramsettings.formaccesstoken'|trans }}: {{ instagramCurrentAccessToken }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

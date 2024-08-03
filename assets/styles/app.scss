@@ -1,0 +1,342 @@
+body {
+    font-family: "Century Gothic", sans-serif;
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background-color: lightblue;
+    border-top : 1px solid black;
+    margin-top: 10px;
+    color: white;
+    padding-top: 10px;
+}
+
+.video{
+    margin-left: 10px;
+}
+
+.guadeloupe img{
+    margin-right: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 80px;
+}
+
+.titleArticle{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.piscine{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card{
+    margin-left: auto;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 10px;
+    margin-right: auto;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.boutonReserve:hover {
+    background-color: white;
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+/*
+Navbar
+ */
+
+.navbar-expand{
+    max-width: 100%;
+}
+
+.iconProfile{
+    height: 35px;
+    width: 35px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    margin-right: 10px;
+}
+
+.dropdown-menu{
+    font-size: small;
+}
+
+.navbar {
+    background-color: lightblue;
+    border-bottom : 1px solid black;
+    position: fixed;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.5s ease, opacity 0.5s ease;
+    z-index: 1;
+}
+
+.nav-item{
+    margin-right: 55px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: large;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.navbar-nav a {
+    position: relative;
+}
+
+.navbar-nav a::selection {
+    color: white;
+}
+
+.navbar-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
+
+.navbar-nav a:hover::after {
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.content {
+    padding-top: 80px;
+}
+
+.title-logo {
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.row-piscine{
+    margin-top: 35px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.p1{
+    align-self: center;
+    margin-right: 20px;
+}
+
+.carousel{
+    width: 50%;
+}
+
+.carousel .carousel-item img{
+    height: 425px;
+}
+
+#carouselCustom{
+    width: 100%;
+}
+
+.container-carousel{
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.subtitle{
+    text-align: center;
+    font-weight: bold;
+}
+
+.p2{
+    align-self: center;
+    margin-left: 10px;
+}
+
+.parallax-window {
+    background-image: url("http://villadesiree.com/images/attrape_bruit.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-window2 {
+    background-image: url("http://villadesiree.com/images/plage_de_fort_royal.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-window3 {
+    background-image: url("http://villadesiree.com/images/les-flamants-du-jardin-botanique.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-window4 {
+    background-image: url("http://villadesiree.com/images/Les-plages-a-proximite.jpg");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardTerrasse{
+    margin-bottom: 30px;
+}
+
+.colTerrasse{
+    text-align: center;
+}
+
+.navbar-transparent {
+    background-color: rgba(173, 216, 230, 0.8) !important;
+    opacity: 0.9;
+}
+
+/*
+Tarif
+ */
+
+.text-muted {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.btn-abritel-div {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: limegreen;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid transparent; /* add a transparent border */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-conditions {
+    margin-top: 40px;
+}
+
+.textToRight {
+    text-align: right;
+}
+
+.pagination {
+    margin-top: 30px;
+}
+
+/*
+Instagram
+ */
+
+.stories-tab {
+    margin: 25px;
+}
+.stories-tab h1 {
+    font-size: 24px;
+    color: #333;
+}
+.stories-tab .story-card {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.stories-tab .media-container {
+    max-width: 200px;
+    margin: 15px auto;
+}
+.stories-tab .card-body {
+    text-align: center;
+}
+
+.textToRightStories {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.guadac{
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:7px;
+}
+
+.error-404{
+    text-align: center;
+}
+

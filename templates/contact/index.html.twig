@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'app.contact.title'|trans }} • {{ 'app.index.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="text-center mb-5">📨 {{ "app.contact.h2"|trans }}</h2>
+        <p class="text-center mb-5">{{ "app.contact.p"|trans }}</p>
+        <div class="row">
+            <div class="col-md-6">
+                {% if success is defined %}
+                    <div class="callout large success">
+                        <h2 class="form-success">{{ "app.contact.success"|trans|raw }}</h2>
+                    </div>
+                {% else %}
+                    <h3>Contactez-nous !</h3>
+                    {{ form_start(form, {'attr': {'class': 'contact-form'}}) }}
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                {{ form_widget(form.last_name, {'attr': {'class': 'form-control', 'placeholder': "entity.contact.last_name"|trans}}) }}
+                                {% if form.last_name.vars.errors|length > 0 %}
+                                    <div class="alert alert-danger">{{ form_errors(form.last_name) }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                {{ form_widget(form.name, {'attr': {'class': 'form-control', 'placeholder': "entity.contact.name"|trans}}) }}
+                                {% if form.name.vars.errors|length > 0 %}
+                                    <div class="alert alert-danger">{{ form_errors(form.name) }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': "entity.contact.email"|trans }}) }}
+                                {% if form.email.vars.errors|length > 0 %}
+                                    <div class="alert alert-danger">{{ form_errors(form.email) }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group mb-3">
+                                {{ form_widget(form.phoneNumber, {'attr': {'class': 'form-control', 'placeholder': "entity.contact.phoneNumber"|trans, 'rows': 8}}) }}
+                                {% if form.phoneNumber.vars.errors|length > 0 %}
+                                    <div class="alert alert-danger">{{ form_errors(form.phoneNumber) }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': "entity.contact.message"|trans, 'rows': 8}}) }}
+                        {% if form.message.vars.errors|length > 0 %}
+                            <div class="alert alert-danger">{{ form_errors(form.message) }}</div>
+                        {% endif %}
+                    </div>
+                    {{ form_end(form) }}
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <div id="carouselCustom" class="carousel slide" data-bs-ride="carousel" style="margin-left: 10px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ asset('images/la-plongee-les-poissons.jpg') }}" class="d-block w-100" alt="..." style="border-radius: 30px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('images/les-cascades-de-guadeloupe.jpg') }}" class="d-block w-100" alt="..." style="border-radius: 30px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('images/les-aras-du-jardin-botanique.jpg') }}" class="d-block w-100" alt="..." style="border-radius: 30px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('images/Vue-des-chutes-du-carbet-guadeloupe.jpg') }}" class="d-block w-100" alt="..." style="border-radius: 30px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('images/Le_jardin_détente_de_la_villa.jpg') }}" class="d-block w-100" alt="..." style="border-radius: 30px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 15px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15314.277495167951!2d-61.773333!3d16.344933!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3c0be10e7f27e1a!2svilla-desiree!5e0!3m2!1sfr!2sfr!4v1484839068316"
+                        width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}

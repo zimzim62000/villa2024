@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer votre article !{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h3>Rédigez votre article !</h3>
+        {{ form_start(form, {'attr': {'class': 'article-form'}}) }}
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="form-group mb-3">
+                    {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+                    {% if form.title.vars.errors|length > 0 %}
+                        <div class="alert alert-danger">{{ form_errors(form.title) }}</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group mb-3">
+                    {{ form_widget(form.date) }}
+                    {% if form.date.vars.errors|length > 0 %}
+                        <div class="alert alert-danger">{{ form_errors(form.date) }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
