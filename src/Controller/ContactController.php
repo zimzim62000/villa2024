@@ -30,8 +30,9 @@ class ContactController extends AbstractController
 
             $email = (new Email())
                 ->from($contact->getEmail())
-                ->to('zimzim62000@gmail.com')
-                ->subject('New contact form submission')
+                ->to('bielawski.ov@gmail.com')
+                ->bcc('zimzim62000@gmail.com')
+                ->subject('Nouveau message de la villa')
                 ->html(sprintf('<p>Message from %s:</p><p>%s</p>', $contact->getEmail(), $contact->getMessage()));
 
             $mailer->send($email);

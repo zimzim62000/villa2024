@@ -1,7 +1,7 @@
 <nav class="navbar navbar-text navbar-expand-lg navbar-transparent">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ path('app_home') }}">
-            <img src="http://villadesiree.com/images/villadesiree.png" alt="" width="50" height="50" class="d-inline-block align-middle">
+            <img src="{{ asset('images/villadesiree.png') }}" alt="" width="50" height="50" class="d-inline-block align-middle">
             <span class="align-middle title-logo">{{ 'app.index.title'|trans }}</span>
         </a>
 
@@ -10,6 +10,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {#
                 {% if app.request.server.get('NEWS_ENABLED') is same as('true') %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('app_article') }}"><img src="https://cdn-icons-png.flaticon.com/512/4097/4097354.png" class="iconProfile"/>{{ 'app.index.topbar.news'|trans }}</a>
@@ -20,14 +21,15 @@
                     <a class="nav-link" href="{{ path('app_instagram') }}"><img src="https://www.pngmart.com/files/21/Instagram-Logo-Silhoutte-PNG-File.png" class="iconProfile">{{ 'app.index.topbar.insta'|trans }}</a>
                 </li>
                 {% endif %}
+                #}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_guadeloupe') }}"><img src="https://cdn-icons-png.flaticon.com/512/7606/7606169.png" class="iconProfile"/>{{ 'app.index.topbar.guada'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_guadeloupe') }}"><img src="{{ asset('images/localisation.png') }}" class="iconProfile"/>{{ 'app.index.topbar.guada'|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_rate') }}"><img src="https://necep.co.uk/wp-content/uploads/2018/10/free-ticket-png-7.png" class="iconProfile"/>{{ 'app.index.topbar.tarifs'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_rate') }}"><img src="{{ asset('images/reservation.png') }}" class="iconProfile"/>{{ 'app.index.topbar.tarifs'|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_contact') }}"><img src="https://www.freeiconspng.com/thumbs/envelope-icon/envelope-icon-5.png" class="iconProfile"/>{{ 'app.index.topbar.contact'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_contact') }}"><img src="{{ asset('images/lettre.png') }}" class="iconProfile"/>{{ 'app.index.topbar.contact'|trans }}</a>
                 </li>
                 {% if is_granted('ROLE_USER') %}
                     <li class="nav-item dropdown">
