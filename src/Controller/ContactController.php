@@ -18,7 +18,7 @@ class ContactController extends AbstractController
     }
 
     #[Route('/contact', name: 'app_contact')]
-    public function index(Request $request, MailerInterface $mailer): Response
+    public function index(Request $request, MailerInterface $mailer, $emailSend, $emailCcSend): Response
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
@@ -30,8 +30,8 @@ class ContactController extends AbstractController
 
             $email = (new Email())
                 ->from($contact->getEmail())
-                ->to('bielawski.ov@gmail.com')
-                ->bcc('zimzim62000@gmail.com')
+                ->to($emailSend)
+                ->bcc($emailCcSend)
                 ->subject('Nouveau message de la villa')
                 ->html(sprintf('<p>Message from %s:</p><p>%s</p>', $contact->getEmail(), $contact->getMessage()));
 

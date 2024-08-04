@@ -46,12 +46,17 @@ footer {
     text-align: center;
 }
 
-.card{
+.card1{
+    width: 28rem;
+}
+
+.card {
     margin-left: auto;
     transition: box-shadow 0.3s ease-in-out;
     margin-bottom: 10px;
     margin-right: auto;
 }
+
 
 .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -78,6 +83,12 @@ Navbar
 .iconProfile{
     height: 35px;
     width: 35px;
+    margin-right: 10px;
+}
+
+.iconLogin{
+    height: 17px;
+    width: 17px;
     margin-right: 10px;
 }
 
@@ -194,7 +205,7 @@ hr {
 }
 
 .parallax-window {
-    background-image: url("http://villadesiree.com/images/attrape_bruit.jpg");
+    background-image: url("https://villadesiree.com/images/attrape_bruit.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -207,7 +218,7 @@ hr {
 }
 
 .parallax-window2 {
-    background-image: url("http://villadesiree.com/images/plage_de_fort_royal.jpg");
+    background-image: url("https://villadesiree.com/images/plage_de_fort_royal.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -220,7 +231,7 @@ hr {
 }
 
 .parallax-window3 {
-    background-image: url("http://villadesiree.com/images/les-flamants-du-jardin-botanique.jpg");
+    background-image: url("https://villadesiree.com/images/les-flamants-du-jardin-botanique.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -233,7 +244,7 @@ hr {
 }
 
 .parallax-window4 {
-    background-image: url("http://villadesiree.com/images/Les-plages-a-proximite.jpg");
+    background-image: url("https://villadesiree.com/images/Les-plages-a-proximite.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -247,6 +258,7 @@ hr {
 
 .cardTerrasse{
     margin-bottom: 30px;
+    width: 30rem;
 }
 
 .colTerrasse{

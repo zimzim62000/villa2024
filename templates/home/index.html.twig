@@ -6,7 +6,7 @@
 
 {% block body %}
     <div class="d-flex">
-        <div class="video flex-shrink-0">
+        <div class="video flex-shrink-0">&
             <iframe width="560" height="315"
                     src="https://www.youtube.com/embed/RyaxlRRQ8aM">
             </iframe>
@@ -23,7 +23,7 @@
     </div>
     <div class="row-piscine row align-items-center">
         <div class="col">
-            <div class="card1 card" style="width: 20rem;">
+            <div class="card1 card">
                 <a href="{{ asset('images/villa_desisree_la_piscine_palmier.jpg') }}"><img src="{{ asset('images/villa_desisree_la_piscine_palmier.jpg') }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <p class="card-text">{{ 'app.index.piscinep'|trans|raw }}</p>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card2 card" style="width: 22rem;">
+            <div class="card1 card">
                 <a href="{{ asset('images/villa_desisree_la_piscine_palmier_v2.jpg') }}"><img src="{{ asset('images/villa_desisree_la_piscine_palmier_v2.jpg') }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <p class="card-text">{{ 'app.index.piscine2'|trans|raw }}</p>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card3 card" style="width: 20rem;">
+            <div class="card1 card">
                 <a href="{{ asset('images/villa_desisree_la_piscine_palmier_v3.jpg') }}"><img src="{{ asset('images/villa_desisree_la_piscine_palmier_v3.jpg') }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <p class="card-text">{{ 'app.index.piscine3'|trans|raw }}</p>
@@ -173,25 +173,25 @@
         <br>
     </div>
     <div class="row-terrasse row align-items-center">
-        <div class="colTerrasse col">
-            <div class="cardTerrasse card" style="width: 23rem;">
+        <div class="colTerrasse col-lg-4">
+            <div class="cardTerrasse card" >
                 <a href="{{ asset('images/villa_la_table_du_dejeuner_creole.jpg') }}"><img src="{{ asset('images/villa_la_table_du_dejeuner_creole.jpg') }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <p class="card-text">{{ 'app.index.terrassep'|trans|raw }}</p>
                 </div>
             </div>
         </div>
-        <div class="colTerrasse col">
-            <div class="cardTerrasse card" style="width: 24rem;">
+        <div class="colTerrasse col-lg-4">
+            <div class="cardTerrasse card" >
                 <a href="{{ asset('images/la_table_de_la_villa_le_soir.jpg') }}"><img src="{{ asset('images/la_table_de_la_villa_le_soir.jpg') }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <p class="card-text">{{ 'app.index.terrassep2'|trans|raw }}</p>
                 </div>
             </div>
-            <a class="btn btn-info btn-lg btn-custom" href={{ path('app_rate') }}>Je réserve !</a>
+            <a class="btn btn-info btn-lg btn-custom" href={{ path('app_contact') }}>Je réserve !</a>
         </div>
-        <div class="colTerrasse col">
-            <div class="cardTerrasse card" style="width: 24rem;">
+        <div class="colTerrasse col-lg-4">
+            <div class="cardTerrasse card" >
                 <a href="{{ asset('images/salon_exterieur.jpg') }}"><img src="{{ asset('images/salon_exterieur.jpg') }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <p class="card-text">{{ 'app.index.terrassep3'|trans|raw }}</p>

@@ -47,8 +47,8 @@
                         </ul>
                     </li>
                 {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_login') }}">{{ 'app.index.topbar.login'|trans }}</a>
+                    <li class="">
+                        <a class="nav-link" href="{{ path('app_login') }}"> <img src={{ asset('images/connexion.png') }} class="iconLogin"/></a>
                     </li>
                 {% endif %}
             </ul>

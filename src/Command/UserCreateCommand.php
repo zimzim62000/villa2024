@@ -1,6 +1,6 @@
 <?php
 
-namespace Primever\SecurityBundle\Command;
+namespace App\Command;
 
 use App\Entity\User;
 use App\Repository\UserRepository;
@@ -56,10 +56,16 @@ class UserCreateCommand extends Command
         $password = $input->getArgument("password");
         $email = $input->getArgument("email");
 
+        $userFind = $this->userRepository->findOneBy(['email' => $email]);
+
         $user = new User();
+        if($userFind instanceof User){
+            $user = $userFind;
+        }
         $user->setEmail($email);
         $hashPassword = $this->hasher->hashPassword($user, $password);
         $user->setPassword($hashPassword);
+        $user->setRoles(['ROLE_ADMIN']);
 
         $this->userRepository->save($user,true);
 

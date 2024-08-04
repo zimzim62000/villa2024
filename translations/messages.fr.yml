@@ -159,8 +159,8 @@ app:
   contact:
     title: "Contact"
     titlemeta: "Nous contacter - La Villa Désirée répond à toute vos questions"
-    h2: "Pour contacter Villa Désirée, location de maison en GUADELOUPE"
-    p: N’hésitez pas à nous contacter pour toute demande de réservation, explications, autres informations…
+    h2: "Contacter la Villa Désirée, location de maison en GUADELOUPE"
+    p: N’hésitez pas à nous contacter pour toute demande de réservation et/ou besoins d'informations
     success: "Merci pour votre message. <br>
     Nous revenons vers vous au plus vite!"
   cost:
