@@ -1,0 +1,44 @@
+version: '3.3'
+
+services:
+
+    server:
+        container_name: '${APP_NAME}-devserver'
+        ports:
+            - '${DEV_PORT}:80'
+        environment:
+            - 'DATABASE_URL=mysql://${DEV_SQL_USER}:${DEV_SQL_PASSWD}@db_server:3306/${DEV_SQL_DB}?serverVersion=10.5'
+        networks:
+            - villa2024_dev
+        build: .
+        working_dir: /var/www/html
+        restart: always
+        volumes:
+            - .:/var/www/html
+            - /var/www/html/vendor
+            - /var/www/html/node_modules
+            - /var/www/html/var/cache
+
+    db_server:
+        image: mariadb:10.11.6
+        container_name: '${APP_NAME}-db'
+        restart: always
+        ports:
+            - '${DEV_DB_PORT}:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASS}'
+            MYSQL_USER: '${DEV_SQL_USER}'
+            MYSQL_PASSWORD: '${DEV_SQL_PASSWD}'
+            MYSQL_DATABASE: '${DEV_SQL_DB}'
+        volumes:
+            - villa2024_db_data:/var/lib/mysql
+            - ./server/my.cnf:/etc/mysql/conf.d/my.cnf
+        networks:
+            - villa2024_dev
+
+volumes:
+    villa2024_db_data:
+
+networks:
+    villa2024_dev:
+

@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'app.cost.title'|trans }} • {{ 'app.index.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center mb-5">🎫 {{ "app.cost.title"|trans }}</h1>
+        <div class="row">
+                <h2>{{ "app.cost.tarifs"|trans }}</h2>
+                <table class="table table-striped">
+                    <thead>
+                    <tr class="text-center">
+                        <th>Tarif de location</th>
+                        <th>Moyenne saison*</th>
+                        <th>Haute saison*</th>
+                        <th>Très haute saison</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                    <tr class="text-center">
+                        <td></td>
+                        <td>Juin-Sept-Oct</td>
+                        <td>Nov à Mai & Juillet-Aout</td>
+                        <td>Noêl & Nouvel An</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Nuitée</td>
+                        <td>179€</td>
+                        <td>195€</td>
+                        <td>220€</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>Semaine</td>
+                        <td>1250€</td>
+                        <td>1365€</td>
+                        <td>1540€</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <p class="text-muted textToRight">{{ "app.cost.legendetarifs"|trans|raw }}</p>
+                </div>
+                <h2>{{ "app.cost.nuite"|trans }}</h2>
+                <p>
+                    {{ "app.cost.pnuite"|trans|raw }}
+                </p>
+                <div class="btn-abritel-div">
+                    <a href="https://www.abritel.fr/location-vacances/p1517562"
+                       class="btn btn-success btn-lg btn-custom" role="button">Villa sur Abritel</a>
+                </div>
+            <div class="conditions">
+                <button class="btn-conditions btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ "app.cost.condition"|trans }}
+                </button>
+                <div class="dropdown-menu p-4 text-muted" style="max-width: 100%;">
+                    <p>
+                        {{ "app.cost.condiplus"|trans|raw }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

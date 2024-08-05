@@ -1,0 +1,13 @@
+#!/bin/bash
+
+rm -rf var/cache/*
+
+composer install
+
+yarn install
+
+yarn run dev
+
+yarn run build
+
+php bin/console doctrine:schema:update --force --complete

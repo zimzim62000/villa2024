@@ -1,0 +1,281 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'app.index.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div class="d-flex">
+        <div class="video flex-shrink-0">&
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/RyaxlRRQ8aM">
+            </iframe>
+        </div>
+        <div class="flex-grow-1 ms-3">
+            <div class="title">
+                <h2>{{ 'app.index.h1'|trans }}</h2>
+                <h3>{{ 'app.index.h22'|trans }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="piscine">
+        <h4>🏊 {{ 'app.index.piscine'|trans }}</h4>
+    </div>
+    <div class="row-piscine row align-items-center">
+        <div class="col">
+            <div class="card1 card">
+                <a href="{{ asset('images/villa_desisree_la_piscine_palmier.jpg') }}"><img src="{{ asset('images/villa_desisree_la_piscine_palmier.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.piscinep'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card1 card">
+                <a href="{{ asset('images/villa_desisree_la_piscine_palmier_v2.jpg') }}"><img src="{{ asset('images/villa_desisree_la_piscine_palmier_v2.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.piscine2'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card1 card">
+                <a href="{{ asset('images/villa_desisree_la_piscine_palmier_v3.jpg') }}"><img src="{{ asset('images/villa_desisree_la_piscine_palmier_v3.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.piscine3'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+        <div class="container-carousel">
+                <div class="p1">
+                    <p>{{ 'app.index.p1'|trans|raw }}</p>
+                </div>
+                <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ asset('images/villa_entree_devanture.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('images/villa_la_desiree_cote_cour.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="subtitle">
+        <h2>{{ 'app.index.h2'|trans }}</h2>
+        <h4>🛌 {{ 'app.index.chambre'|trans }}</h4>
+        <br>
+    </div>
+    <div class="row-chambre row align-items-center">
+        <div class="col1 col">
+            <div class="cardChambre1 card" style="width: 31rem;">
+                <a href="{{ asset('images/chambre_parentale.jpg') }}"><img src="{{ asset('images/chambre_parentale.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.chambrep'|trans|raw }}</p>
+                </div>
+            </div>
+            <div class="cardChambre3 card" style="width: 31rem;">
+                <a href="{{ asset('images/chambre_mezzanine.jpg') }}"><img src="{{ asset('images/chambre_mezzanine.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.chambre2'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col2 col">
+            <div class="cardChambre2 card" style="width: 34rem;">
+                <a href="{{ asset('images/villa_desiree_la_chambre_jaune.jpg') }}"><img src="{{ asset('images/villa_desiree_la_chambre_jaune.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.chambre3'|trans|raw }}</p>
+                </div>
+            </div>
+            <div class="cardChambre4 card" style="width: 34rem;">
+                <a href="{{ asset('images/chambre_enfant.jpg') }}"><img src="{{ asset('images/chambre_enfant.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.chambre4'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-window"></div>
+    <hr/>
+    <div class="subtitle">
+        <h4>✈️ {{ 'app.index.cuisine'|trans }} 🌞</h4>
+        <br>
+    </div>
+    <div class="container-carousel">
+        <div id="carouselMaison" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselMaison" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselMaison" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselMaison" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselMaison" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselMaison" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselMaison" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="{{ asset('images/la_cuisine_de_la_villa.jpg') }}"><img src="{{ asset('images/la_cuisine_de_la_villa.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>La cuisine de la villa</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ asset('images/salon_haut.jpg') }}"><img src="{{ asset('images/salon_haut.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Le petit salon intérieur</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ asset('images/maison_interieur.jpg') }}"><img src="{{ asset('images/maison_interieur.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Le coin bureau</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ asset('images/salle_de_bain-3.jpg') }}"><img src="{{ asset('images/salle_de_bain-3.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>La 1ère salle de bain</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ asset('images/salle_de_bain-2.jpg') }}"><img src="{{ asset('images/salle_de_bain-2.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>La 2e salle de bain</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ asset('images/salle_de_bain-1.jpg') }}"><img src="{{ asset('images/salle_de_bain-1.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>La douche de la 2e salle de bain</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMaison" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMaison" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="p2">
+            <p>{{ 'app.index.cuisinep'|trans|raw }}</p>
+        </div>
+    </div>
+    <hr/>
+    <div class="subtitle">
+        <h4>🍹 {{ 'app.index.terrasse'|trans }}</h4>
+        <br>
+    </div>
+    <div class="row-terrasse row align-items-center">
+        <div class="colTerrasse col-lg-4">
+            <div class="cardTerrasse card" >
+                <a href="{{ asset('images/villa_la_table_du_dejeuner_creole.jpg') }}"><img src="{{ asset('images/villa_la_table_du_dejeuner_creole.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.terrassep'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="colTerrasse col-lg-4">
+            <div class="cardTerrasse card" >
+                <a href="{{ asset('images/la_table_de_la_villa_le_soir.jpg') }}"><img src="{{ asset('images/la_table_de_la_villa_le_soir.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.terrassep2'|trans|raw }}</p>
+                </div>
+            </div>
+            <a class="btn btn-info btn-lg btn-custom" href={{ path('app_contact') }}>Je réserve !</a>
+        </div>
+        <div class="colTerrasse col-lg-4">
+            <div class="cardTerrasse card" >
+                <a href="{{ asset('images/salon_exterieur.jpg') }}"><img src="{{ asset('images/salon_exterieur.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.terrassep3'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="parallax-window2"></div>
+    <hr/>
+    <div class="subtitle">
+        <h4>🌺 {{ 'app.index.jardin'|trans }}</h4>
+        <br>
+    </div>
+    <div class="container-carousel">
+        <div class="p1">
+            <p>{{ 'app.index.jardinp'|trans|raw }}</p>
+        </div>
+        <div id="carouselJardin" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselJardin" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselJardin" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselJardin" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="{{ asset('images/fleur_2.jpg') }}"><img src="{{ asset('images/fleur_2.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Le bananier et le palmier</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ asset('images/fleur_3.jpg') }}"><img src="{{ asset('images/fleur_3.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Et pour le plaisir encore ce magnifique Hibiscus</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{ asset('images/jardin-palmier-bismarck.jpg') }}"><img src="{{ asset('images/jardin-palmier-bismarck.jpg') }}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Le palmier Bismarck de la villa</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselJardin" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselJardin" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <hr/>
+    <div class="subtitle">
+        <h4>🏖️ {{ 'app.index.plage'|trans }}</h4>
+        <br>
+    </div>
+    <div class="row-plage row align-items-center">
+        <div class="colPlage col">
+            <div class="cardPlage card" style="width: 25rem;">
+                <a href="{{ asset('images/plage_de_fort_royal.jpg') }}"><img src="{{ asset('images/plage_de_fort_royal.jpg') }}" class="card-img-top" alt="..." style="height: 350px"></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.plagep'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="colPlage col">
+            <div class="cardPlage card" style="width: 25rem;">
+                <a href="{{ asset('images/plage_de_fort_royal_2.jpg') }}"><img src="{{ asset('images/plage_de_fort_royal_2.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.plage2'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="colPlage col">
+            <div class="cardPlage card" style="width: 25rem;">
+                <a href="{{ asset('images/plage_de_fort_royal_3.jpg') }}"><img src="{{ asset('images/plage_de_fort_royal_3.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.plage3'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

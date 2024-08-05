@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'app.guadeloupe.title'|trans }} • {{ 'app.index.title'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div class="d-flex">
+        <div class="flex-grow-1 ms-3">
+            <div class="title">
+                <h2>{{ 'app.index.environement'|trans }}</h2>
+            </div>
+        </div>
+        <div class="guadeloupe flex-shrink-0">
+            <img class="medium" src="{{ asset('images/Carte-Guadeloupe-3.jpg') }}" title="{{ 'image.carte'|trans }}"
+                 alt="{{ 'image.carte'|trans }}" style="width:560px;height: 350px"/>
+        </div>
+    </div>
+    <hr/>
+    <div class="row-guadeloupe row align-items-center">
+        <div class="col1 col">
+            <div class="cardGuadeloupe1 card" style="width: 34rem;">
+                <a href="{{ asset('images/deshaies.jpg') }}"><img src="{{ asset('images/deshaies.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.environementp'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col2 col">
+            <div class="cardGuadeloupe2 card" style="width: 34rem;">
+                <a href="{{ asset('images/eglise_deshaies.jpg') }}"><img src="{{ asset('images/eglise_deshaies.jpg') }}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.environement2'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="subtitle">
+        <h4>🏴󠁦󠁲󠁧󠁵󠁡󠁿 {{ 'app.index.guadaclimat'|trans }}</h4>
+        <br>
+    </div>
+    <div class="d-flex">
+        <div class="p2">
+            <p>{{ 'app.index.guadaclimatp'|trans|raw }}</p>
+        </div>
+        <div class="video flex-shrink-0">
+            <a href="{{ asset('images/epice.jpg') }}"><img class="guadac medium" src="{{ asset('images/epice.jpg') }}" title="{{ 'image.carte'|trans }}"
+                                                           alt="{{ 'image.carte'|trans }}" style="width:560px;height: 350px; margin-right: 10px"/></a>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="video flex-shrink-0">
+            <a href="{{ asset('images/legume.jpg') }}"><img class="guadac medium" src="{{ asset('images/legume.jpg') }}" title="{{ 'image.carte'|trans }}"
+                                                            alt="{{ 'image.carte'|trans }}" style="width:560px;height: 350px"/></a>
+        </div>
+        <div class="p2">
+            <p>{{ 'app.index.guadaclimat2'|trans|raw }}</p>
+        </div>
+    </div>
+    <hr />
+    <div class="parallax-window3"></div>
+    <hr/>
+    <div class="subtitle">
+        <h4>😎󠁦󠁲󠁧󠁵󠁡󠁿 {{ 'app.index.activity'|trans }}</h4>
+        <br>
+    </div>
+    <div class="row-activity row align-items-center">
+        <div class="colActivity col">
+            <div class="cardActivity card" style="width: 60%;">
+                <a href="{{ asset('images/la-Plage-de-la-Perle.jpg') }}"><img src="{{ asset('images/la-Plage-de-la-Perle.jpg') }}" class="card-img-top" alt="..." style="height: 500px"></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.activity2'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row-activity row align-items-center">
+        <div class="colActivity col">
+            <div class="cardActivity card" style="width: 80%;">
+                <a href="{{ asset('images/la-cascade-aux-ecrevisses.jpg') }}"><img src="{{ asset('images/la-cascade-aux-ecrevisses.jpg') }}" class="card-img-top" alt="..." style="height: auto"></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.activityp'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="colActivity col">
+            <div class="cardActivity card" style="width: 80%;">
+                <a href="{{ asset('images/la-plage-malendure.jpg') }}"><img src="{{ asset('images/la-plage-malendure.jpg') }}" class="card-img-top" alt="..." style="height: auto"></a>
+                <div class="card-body">
+                    <p class="card-text">{{ 'app.index.activity3'|trans|raw }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="subtitle">
+        <h4>🔎󠁦󠁲󠁧 {{ 'app.index.decouverte'|trans }}</h4>
+        <h6>{{ 'app.index.decouvertep'|trans|raw }}</h6>
+        <br>
+    </div>
+    <div class="parallax-window4"></div>
+    <hr/>
+    <div class="row-capital row align-items-center">
+        <div class="colCapital col">
+            <div class="cardCapital card" style="width: 90%;">
+                <div class="card-body">
+                    <h5 class="card-title">📍{{ 'app.index.pointe'|trans }}</h5>
+                    <p class="card-text">{{ 'app.index.pointep'|trans|raw }}</p>
+                </div>
+                <a href="{{ asset('images/Pointe-à-Pitre_sous-préfecture.jpg') }}"><img src="{{ asset('images/Pointe-à-Pitre_sous-préfecture.jpg') }}" class="card-img-top" alt="..." style="height: auto"></a>
+            </div>
+        </div>
+        <div class="colCapital col">
+            <div class="cardCapital card" style="width: 90%;">
+                <div class="card-body">
+                    <h5 class="card-title">🐚{{ 'app.index.grandterre'|trans }}</h5>
+                    <p class="card-text">{{ 'app.index.grandterrep'|trans|raw }}</p>
+                </div>
+                <a href="{{ asset('images/Les-plages-a-proximite.jpg') }}"><img src="{{ asset('images/Les-plages-a-proximite.jpg') }}" class="card-img-top" alt="..." style="height: auto;"></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

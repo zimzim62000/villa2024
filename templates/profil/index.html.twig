@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Messages{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="my-5">Mes messages</h1>
+
+        {% for contact in contacts %}
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5 class="card-title">{{ contact.name }}</h5>
+                    <p class="card-subtitle mb-2 text-muted">{{ contact.email }}</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><strong>Message:</strong> <br> {{ contact.message }}</p>
+                    <p class="card-text textToRight"><em class="text-muted">{{ contact.createdAt|date('Y-m-d H:i:s') }}</em></p>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-warning" role="alert">
+                Pas de messages.
+            </div>
+        {% endfor %}
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% if currentPage > 1 %}
+                    <li class="page-item"><a class="page-link" href="{{ path('app_profile', {'page': currentPage - 1}) }}">Précédent</a></li>
+                {% endif %}
+
+                {% for i in 1..totalPages %}
+                    {% if i == currentPage %}
+                        <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="{{ path('app_profile', {'page': i}) }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if currentPage < totalPages %}
+                    <li class="page-item"><a class="page-link" href="{{ path('app_profile', {'page': currentPage + 1}) }}">Suivant</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
+    </div>
+{% endblock %}

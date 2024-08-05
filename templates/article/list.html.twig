@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index des articles{% endblock %}
+
+{% block body %}
+    <h1 class="text-center mb-4">Index des articles 📚</h1>
+    <div class="container">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Date de publication</th>
+                    <th>Auteur</th>
+                    <th>Titre</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for article in articles %}
+                    <tr>
+                        <td>{{ article.date|date('Y-m-d H:i') }}</td>
+                        <td>{{ article.author }}</td>
+                        <td>{{ article.title }}</td>
+                        <td>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <a href="{{ path('app_article_edit', {'id': article.id}) }}"><button type="button" class="btn btn-outline-success">Modifier ✏️</button></a>
+                            {% endif %}
+                            <a href="{{ path('app_article_show', {'id': article.id}) }}"><button type="button" class="btn btn-outline-secondary">Voir plus... 🔍</button></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('app_article_new') }}">Créer un nouvel article</a>
+            {% endif %}
+    </div>
+{% endblock %}
