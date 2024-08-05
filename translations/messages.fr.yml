@@ -95,7 +95,8 @@ app:
     plage3: >
       Envie de vous rafraichir, vous pouvez profiter des commodités de l’hôtel, un bar de plage très sympa qui propose de délicieux Smoothies, de petites tables en bois et les chaises caribéennes typiques vous permettent de profiter de la vue magnifique en bleu et blanc.<br /><br />
       Enfin, si vous avez envie d’une petite balade, un petit chemin côtier vous amène à  la jolie plage de la Perle et plus loin de Grande Anse.<br />
-    environement: "La Guadeloupe, le paradis des caraïbes. La Villa Désirée, location de maison de vacances à DESHAIES, GUADELOUPE."
+    environement: >
+      La Guadeloupe, le paradis des caraïbes. <br />La Villa Désirée, location de maison de vacances à DESHAIES, GUADELOUPE.
     environementp: >
       Deshaies est l’une des plus belles communes de Guadeloupe. Elle s’étend sur 14 km où alternent plages et criques dominées par les montagnes.<br /><br />
       La ville de DESHAIES est une station touristique et balnéaire, tournée vers un tourisme responsable avec pour objectif la protection de l’environnement.<br /><br />

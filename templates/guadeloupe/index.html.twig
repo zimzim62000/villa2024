@@ -5,16 +5,14 @@
 {% endblock %}
 
 {% block body %}
-    <div class="d-flex">
-        <div class="flex-grow-1 ms-3">
-            <div class="title">
-                <h2>{{ 'app.index.environement'|trans }}</h2>
-            </div>
+    <div class="d-flex justify-content-center align-content-center">
+        <div class="text-center">
+            <h2>{{ 'app.index.environement'|trans|raw }}</h2>
         </div>
-        <div class="guadeloupe flex-shrink-0">
-            <img class="medium" src="{{ asset('images/Carte-Guadeloupe-3.jpg') }}" title="{{ 'image.carte'|trans }}"
-                 alt="{{ 'image.carte'|trans }}" style="width:560px;height: 350px"/>
-        </div>
+{#        <div class="guadeloupe flex-shrink-0">#}
+{#            <img class="medium" src="{{ asset('images/Carte-Guadeloupe-3.jpg') }}" title="{{ 'image.carte'|trans }}"#}
+{#                 alt="{{ 'image.carte'|trans }}" style="width:560px;height: 350px"/>#}
+{#        </div>#}
     </div>
     <hr/>
     <div class="row-guadeloupe row align-items-center">
