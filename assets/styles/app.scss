@@ -14,7 +14,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 65px;
-    background-color: lightblue;
+    background-color: #4169E1;
     border-top : 1px solid black;
     margin-top: 10px;
     color: white;
@@ -94,7 +94,7 @@ Navbar
 }
 
 .navbar {
-    background-color: lightblue;
+    background-color: #4169E1;
     border-bottom : 1px solid black;
     position: fixed;
     width: 100%;
@@ -282,7 +282,7 @@ hr {
 }
 
 .navbar-transparent {
-    background-color: rgba(173, 216, 230, 0.8) !important;
+    background-color: #4169E1 !important;
     opacity: 0.9;
 }
 
@@ -301,7 +301,7 @@ Tarif
 }
 
 .btn-custom {
-    background-color: limegreen;
+    background-color: #4169E1;
     color: white;
     border-radius: 20px;
     padding: 10px 20px;
@@ -326,6 +326,10 @@ Tarif
 
 .pagination {
     margin-top: 30px;
+}
+
+.custom-table thead th {
+    border-bottom: 3px solid #4169E1;
 }
 
 /*
@@ -366,6 +370,13 @@ Instagram
     text-align: center;
 }
 
+/*Page Guadeloupe */
+
+@media (max-width: 991.98px) {
+    .p2 {
+        text-align: center;
+    }
+}
 .reservation-button-responsive{
     display: block;
     @media screen and (min-width: 1550px){
