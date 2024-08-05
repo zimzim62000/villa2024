@@ -248,6 +248,8 @@ image:
   fleur1: "Le magnigique Hibiscus"
   fleur2: "Le Bananier et un palmier"
   fleur3: "Et pour le plaisir encore ce magnigique Hibiscus"
+  epices: "Stand d'épices"
+  marche: "Marché de Basse-Terre"
 
 error:
   email:
