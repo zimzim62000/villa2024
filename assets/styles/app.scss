@@ -21,10 +21,6 @@ footer {
     padding-top: 10px;
 }
 
-.video{
-    margin-left: 10px;
-}
-
 .guadeloupe img{
     margin-right: 10px;
     text-align: center;
@@ -33,7 +29,6 @@ footer {
 
 .title{
     text-align: center;
-    margin-top: 80px;
 }
 
 .titleArticle{
@@ -177,6 +172,18 @@ hr {
 
 .carousel{
     width: 50%;
+    @media screen and (max-width: 1300px){
+        width: 75%;
+    }
+    @media screen and (max-width: 1300px){
+        width: 65%;
+    }
+    @media screen and (max-width: 1000px){
+        width: 75%;
+    }
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
 }
 
 .carousel .carousel-item img{
@@ -194,6 +201,10 @@ hr {
     overflow: hidden;
     margin-left: 10px;
     margin-right: 10px;
+    @media screen and (max-width: 1300px){
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .subtitle{
@@ -207,7 +218,7 @@ hr {
 }
 
 .parallax-window {
-    background-image: url("https://villadesiree.com/images/attrape_bruit.jpg");
+    background-image: url("https://www.villadesiree.com/images/attrape_bruit.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -220,7 +231,7 @@ hr {
 }
 
 .parallax-window2 {
-    background-image: url("https://villadesiree.com/images/plage_de_fort_royal.jpg");
+    background-image: url("https://www.villadesiree.com/images/plage_de_fort_royal.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -233,7 +244,7 @@ hr {
 }
 
 .parallax-window3 {
-    background-image: url("https://villadesiree.com/images/les-flamants-du-jardin-botanique.jpg");
+    background-image: url("https://www.villadesiree.com/images/les-flamants-du-jardin-botanique.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -246,7 +257,7 @@ hr {
 }
 
 .parallax-window4 {
-    background-image: url("https://villadesiree.com/images/Les-plages-a-proximite.jpg");
+    background-image: url("https://www.villadesiree.com/images/Les-plages-a-proximite.jpg");
 
     /* Set a specific height */
     min-height: 500px;
@@ -265,6 +276,9 @@ hr {
 
 .colTerrasse{
     text-align: center;
+    @media screen and (max-width: 1550px){
+        width: auto;
+    }
 }
 
 .navbar-transparent {
@@ -352,3 +366,23 @@ Instagram
     text-align: center;
 }
 
+.reservation-button-responsive{
+    display: block;
+    @media screen and (min-width: 1550px){
+        display: none;
+    }
+    width: 30rem;
+}
+
+.terrasse-flex-responsive{
+    @media screen and (min-width: 1550px){
+        flex-direction: row !important;
+    }
+}
+
+.reservation-button{
+    display: none;
+    @media screen and (min-width: 1550px){
+        display: inline-block !important;
+    }
+}
