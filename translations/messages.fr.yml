@@ -144,7 +144,7 @@ app:
       <h5>🌊<U>Les chutes du carbet :</h5></U>
       Les 3 chutes sont impressionnantes, la plus facile d’accès (la deuxième) est haute de 110m et fait l’émerveillement des visiteurs.<br />
       C’est un des sites les plus visités de l'île avec environ 400 000 visiteurs par an.<br />
-    decouverte: "La découverte de la Cote sous le vent :"
+    decouverte: "La découverte de la Côte sous le vent :"
     decouvertep: >
       En partant de l’autre côté (vers Bouillante), la côte sous-le-vent, avec ses habitations consacrées au café, au cacao, à la vanille… (la Grivelière, musée du café, maison du cacao, domaine vanibel…)<br />
     pointe: "La capitale : Pointe à Pitre"
@@ -164,11 +164,11 @@ app:
     success: "Merci pour votre message. <br>
     Nous revenons vers vous au plus vite!"
   cost:
-    title: "Tarifs et Réservation de la Villa Désirée"
-    nuite: "Les nuitées"
+    title: "Tarifs et réservation de la Villa Désirée"
+    nuite: "Les nuitées :"
     pnuite: >
-      La durée de séjour minimun est de 5 nuits.<br />
-    tarifs: "Les tarifs"
+      La durée de séjour minimum est de 5 nuits.<br />
+    tarifs: "Les tarifs :"
     legendetarifs: >
       Les tarifs sont donnés pour une base de 6 personnes.
     condition: "Les conditions"
