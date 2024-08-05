@@ -10,6 +10,7 @@ app:
       lamaison: "La maison"
       guada: "La Guadeloupe"
       tarifs: "Tarifs/Réservations"
+      articles: "Articles"
       contact: "Nous contacter"
       insta: "Stories"
       instasettings: 'Paramètres Instagram'

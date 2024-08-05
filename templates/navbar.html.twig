@@ -24,13 +24,16 @@
                 {% endif %}
                 #}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_guadeloupe') }}"><img src="{{ asset('images/localisation.png') }}" class="iconProfile"/>{{ 'app.index.topbar.guada'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_guadeloupe') }}"><img src="{{ asset('images/localisation.png') }}" class="iconProfile" alt="La Guadeloupe"/>{{ 'app.index.topbar.guada'|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_rate') }}"><img src="{{ asset('images/reservation.png') }}" class="iconProfile"/>{{ 'app.index.topbar.tarifs'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_rate') }}"><img src="{{ asset('images/reservation.png') }}" class="iconProfile" alt="Tarifs/Réservations"/>{{ 'app.index.topbar.tarifs'|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_contact') }}"><img src="{{ asset('images/lettre.png') }}" class="iconProfile"/>{{ 'app.index.topbar.contact'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_article_list') }}"><img src="{{ asset('images/ic-newspaper.png') }}" class="iconProfile" alt="Articles"/>{{ 'app.index.topbar.articles'|trans }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_contact') }}"><img src="{{ asset('images/lettre.png') }}" class="iconProfile" alt="Nous contacter"/>{{ 'app.index.topbar.contact'|trans }}</a>
                 </li>
                 {% if is_granted('ROLE_USER') %}
                     <li class="nav-item dropdown">
