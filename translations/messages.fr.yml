@@ -95,7 +95,8 @@ app:
     plage3: >
       Envie de vous rafraichir, vous pouvez profiter des commodités de l’hôtel, un bar de plage très sympa qui propose de délicieux Smoothies, de petites tables en bois et les chaises caribéennes typiques vous permettent de profiter de la vue magnifique en bleu et blanc.<br /><br />
       Enfin, si vous avez envie d’une petite balade, un petit chemin côtier vous amène à  la jolie plage de la Perle et plus loin de Grande Anse.<br />
-    environement: "La Guadeloupe, le paradis des caraïbes. La Villa Désirée, location de maison de vacances à DESHAIES, GUADELOUPE."
+    environement: >
+      La Guadeloupe, le paradis des caraïbes. <br />La Villa Désirée, location de maison de vacances à DESHAIES, GUADELOUPE.
     environementp: >
       Deshaies est l’une des plus belles communes de Guadeloupe. Elle s’étend sur 14 km où alternent plages et criques dominées par les montagnes.<br /><br />
       La ville de DESHAIES est une station touristique et balnéaire, tournée vers un tourisme responsable avec pour objectif la protection de l’environnement.<br /><br />
@@ -144,7 +145,7 @@ app:
       <h5>🌊<U>Les chutes du carbet :</h5></U>
       Les 3 chutes sont impressionnantes, la plus facile d’accès (la deuxième) est haute de 110m et fait l’émerveillement des visiteurs.<br />
       C’est un des sites les plus visités de l'île avec environ 400 000 visiteurs par an.<br />
-    decouverte: "La découverte de la Cote sous le vent :"
+    decouverte: "La découverte de la Côte sous le vent :"
     decouvertep: >
       En partant de l’autre côté (vers Bouillante), la côte sous-le-vent, avec ses habitations consacrées au café, au cacao, à la vanille… (la Grivelière, musée du café, maison du cacao, domaine vanibel…)<br />
     pointe: "La capitale : Pointe à Pitre"
@@ -164,11 +165,11 @@ app:
     success: "Merci pour votre message. <br>
     Nous revenons vers vous au plus vite!"
   cost:
-    title: "Tarifs et Réservation de la Villa Désirée"
-    nuite: "Les nuitées"
+    title: "Tarifs et réservation de la Villa Désirée"
+    nuite: "Les nuitées :"
     pnuite: >
-      La durée de séjour minimun est de 5 nuits.<br />
-    tarifs: "Les tarifs"
+      La durée de séjour minimum est de 5 nuits.<br />
+    tarifs: "Les tarifs :"
     legendetarifs: >
       Les tarifs sont donnés pour une base de 6 personnes.
     condition: "Les conditions"
@@ -248,6 +249,8 @@ image:
   fleur1: "Le magnigique Hibiscus"
   fleur2: "Le Bananier et un palmier"
   fleur3: "Et pour le plaisir encore ce magnigique Hibiscus"
+  epices: "Stand d'épices"
+  marche: "Marché de Basse-Terre"
 
 error:
   email:
