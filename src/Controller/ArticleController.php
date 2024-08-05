@@ -34,7 +34,6 @@ class ArticleController extends AbstractController
     {
         $article = new Article();
         $form = $this->createForm(ArticleType::class, $article);
-
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
@@ -91,5 +90,25 @@ class ArticleController extends AbstractController
             'article' => $article,
             'form' => $form->createView(),
         ]);
+    }
+
+    #[Route('/article/{id}/delete', name: 'app_article_delete', methods: ['GET'])]
+    #[IsGranted('ROLE_ADMIN')]
+    public function delete(Request $request, Article $article): Response
+    {
+        $this->entityManager->remove($article);
+        $this->entityManager->flush();
+
+        return $this->redirectToRoute('app_article');
+    }
+
+    #[Route('/article/{id}/enabled', name: 'app_article_enable', methods: ['GET'])]
+    #[IsGranted('ROLE_ADMIN')]
+    public function enableDisable(Request $request, Article $article): Response
+    {
+        $article->setEnabled(!$article->isEnabled());
+        $this->entityManager->flush();
+
+        return $this->redirectToRoute('app_article');
     }
 }

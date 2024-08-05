@@ -7,6 +7,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
 #[Vich\Uploadable]
@@ -18,13 +19,16 @@ class Article
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     private ?string $title = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[Assert\NotNull]
     private ?\DateTimeInterface $date = null;
 
     #[ORM\ManyToOne(inversedBy: 'articles')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Assert\NotNull]
     private ?User $author = null;
 
     #[Vich\UploadableField(mapping: 'article_images', fileNameProperty: 'imageName')]
@@ -37,10 +41,16 @@ class Article
     private ?string $videoLink = null;
 
     #[ORM\Column(nullable: true)]
+    #[Assert\DateTime]
     private ?\DateTimeImmutable $imageUpdatedAt = null;
 
     #[ORM\Column(length: 1000)]
+    #[Assert\NotBlank]
     private ?string $content = null;
+
+    #[ORM\Column(type: Types::BOOLEAN, options: ['default' => false])]
+    #[Assert\NotNull]
+    private ?bool $enabled = null;
 
     public function getId(): ?int
     {
@@ -133,6 +143,18 @@ class Article
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function isEnabled(): ?bool
+    {
+        return $this->enabled;
+    }
+
+    public function setEnabled(bool $enabled): self
+    {
+        $this->enabled = $enabled;
 
         return $this;
     }
