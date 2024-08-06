@@ -47,7 +47,7 @@ class Article
     #[Assert\NotBlank]
     private ?string $content = null;
 
-    #[ORM\Column(type: Types::BOOLEAN, options: ['default' => false])]
+    #[ORM\Column(type: Types::BOOLEAN, options: ['default' => true])]
     #[Assert\NotNull]
     private ?bool $enabled = null;
 

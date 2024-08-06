@@ -20,7 +20,7 @@ class ArticleController extends AbstractController
     #[Route('/article', name: 'app_article')]
     public function index(): Response
     {
-        $articles = $this->entityManager->getRepository(Article::class)->findBy([], ['date'=>'DESC'], 3);
+        $articles = $this->entityManager->getRepository(Article::class)->findBy(['enabled'=> true], ['date'=>'DESC'], 3);
 
         return $this->render('article/index.html.twig', [
             'articles' => $articles,
@@ -60,7 +60,7 @@ class ArticleController extends AbstractController
     #[Route('/articleList', name: 'app_article_list')]
     public function articleList(): Response
     {
-        $articles = $this->entityManager->getRepository(Article::class)->findBy([], ['date'=>'DESC']);
+        $articles = $this->entityManager->getRepository(Article::class)->findBy(['enabled'=>true], ['date'=>'DESC']);
 
         return $this->render('article/list.html.twig', [
             'articles' => $articles,

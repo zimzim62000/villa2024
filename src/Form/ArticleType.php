@@ -73,7 +73,8 @@ class ArticleType extends AbstractType
                 'attr' => [
                     'class' => 'form-check-input switch-input'
                 ],
-                'required' => false
+                'required' => false,
+                'data' => true
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Publier',
