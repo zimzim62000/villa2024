@@ -404,3 +404,13 @@ Instagram
         display: inline-block !important;
     }
 }
+
+/* Page Articles */
+
+.truncate-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

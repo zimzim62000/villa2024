@@ -3,7 +3,11 @@
 {% block title %}Index des articles{% endblock %}
 
 {% block body %}
-    <h1 class="text-center mb-4">Index des articles 📚</h1>
+    {% if gestionnaire %}
+        <h1 class="text-center mb-4">Gestionnaire des articles 🔧</h1>
+    {% else %}
+        <h1 class="text-center mb-4">Index des articles 📚</h1>
+    {% endif %}
     <div class="container">
             <table class="table table-striped">
                 <thead>

@@ -65,6 +65,7 @@ class ArticleController extends AbstractController
         return $this->render('article/list.html.twig', [
             'articles' => $articles,
             'controller_name' => 'ArticleController',
+            'gestionnaire' => false
         ]);
     }
 
@@ -76,6 +77,7 @@ class ArticleController extends AbstractController
         return $this->render('article/list.html.twig', [
             'articles' => $articles,
             'controller_name' => 'ArticleController',
+            'gestionnaire' => true
         ]);
     }
 
