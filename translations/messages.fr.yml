@@ -6,10 +6,12 @@ app:
       login: "Connexion"
       logout: "Déconnexion"
       profile: "Profil"
-      article: "Articles"
+      redigerArticle: "Rédiger un article"
+      gestionnaireArticles: "Gestionnaire des articles"
       lamaison: "La maison"
       guada: "La Guadeloupe"
       tarifs: "Tarifs/Réservations"
+      articles: "Articles"
       contact: "Nous contacter"
       insta: "Stories"
       instasettings: 'Paramètres Instagram'

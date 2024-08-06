@@ -6,34 +6,36 @@
 
 {% block body %}
     <div class="container">
-        <div style="text-align: center">
+        <div class="d-flex flex-row justify-content-center">
+            {% if article.videoLink %}
+                <iframe width="600" height="300"
+                        src="{{ article.videoLink }}">
+                </iframe>
+            {% endif %}
             {% if article.imageName %}
                 {% if article.imageName ends with '.mp4' or article.imageName ends with '.avi' or article.imageName ends with '.mov' %}
                     <video controls style="width: 750px; height: 400px">
                         <source src="/images/articles/{{ article.imageName }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        Your browser does not support the video tag.
+                    </video>
                 {% else %}
-                    <img src="/images/articles/{{ article.imageName }}" class="card-img-top" alt="..." style="width: 25%;">
+                    <img src="/images/articles/{{ article.imageName }}" alt="{{ article.imageName }}" class="w-25">
                 {% endif %}
-            {% elseif article.videoLink %}
-                <iframe width="750" height="400"
-                        src="{{ article.videoLink }}">
-                </iframe>
             {% endif %}
         </div>
-        <br/>
+        <br />
         <div class="card">
             <div class="card-header text-center">
-                Titre : {{ article.title }}
+                {{ article.title }}
             </div>
             <div class="card-body">
                 <p class="card-text">{{ article.content|raw }}</p>
             </div>
             <div class="card-footer text-muted text-center">
                 Auteur : {{ article.author }}
-                <br/>
-                Date de publication : {{ article.date|format_datetime(locale='fr', pattern="EEEE d MMMM yyyy 'à' HH:mm") }}
+                <br />
+                Date de publication
+                : {{ article.date|format_datetime(locale='fr', pattern="EEEE d MMMM yyyy 'à' HH:mm") }}
             </div>
         </div>
     </div>

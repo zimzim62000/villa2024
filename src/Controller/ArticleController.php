@@ -20,7 +20,7 @@ class ArticleController extends AbstractController
     #[Route('/article', name: 'app_article')]
     public function index(): Response
     {
-        $articles = $this->entityManager->getRepository(Article::class)->findBy([], ['date'=>'DESC'], 3);
+        $articles = $this->entityManager->getRepository(Article::class)->findBy(['enabled'=> true], ['date'=>'DESC'], 3);
 
         return $this->render('article/index.html.twig', [
             'articles' => $articles,
@@ -60,11 +60,25 @@ class ArticleController extends AbstractController
     #[Route('/articleList', name: 'app_article_list')]
     public function articleList(): Response
     {
+        $articles = $this->entityManager->getRepository(Article::class)->findBy(['enabled'=>true], ['date'=>'DESC']);
+
+        return $this->render('article/list.html.twig', [
+            'articles' => $articles,
+            'controller_name' => 'ArticleController',
+            'gestionnaire' => false
+        ]);
+    }
+
+    #[Route('/adminArticleList', name: 'app_admin_article_list')]
+    #[IsGranted('ROLE_ADMIN')]
+    public function adminArticleList(): Response
+    {
         $articles = $this->entityManager->getRepository(Article::class)->findBy([], ['date'=>'DESC']);
 
         return $this->render('article/list.html.twig', [
             'articles' => $articles,
             'controller_name' => 'ArticleController',
+            'gestionnaire' => true
         ]);
     }
 
@@ -99,7 +113,7 @@ class ArticleController extends AbstractController
         $this->entityManager->remove($article);
         $this->entityManager->flush();
 
-        return $this->redirectToRoute('app_article');
+        return $this->redirectToRoute('app_admin_article_list');
     }
 
     #[Route('/article/{id}/enabled', name: 'app_article_enable', methods: ['GET'])]
@@ -109,6 +123,6 @@ class ArticleController extends AbstractController
         $article->setEnabled(!$article->isEnabled());
         $this->entityManager->flush();
 
-        return $this->redirectToRoute('app_article_list');
+        return $this->redirectToRoute('app_admin_article_list');
     }
 }

@@ -10,13 +10,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-
-                {% if is_granted('ROLE_ADMIN') %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_article_list') }}"><img src="https://cdn-icons-png.flaticon.com/512/4097/4097354.png" class="iconProfile"/>{{ 'app.index.topbar.news'|trans }}</a>
-                    </li>
-                {% endif %}
                 {#
                 {% if app.request.server.get('INSTAGRAM_ENABLED') is same as('true') %}
                 <li class="nav-item">
@@ -25,22 +18,26 @@
                 {% endif %}
                 #}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_guadeloupe') }}"><img src="{{ asset('images/localisation.png') }}" class="iconProfile"/>{{ 'app.index.topbar.guada'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_guadeloupe') }}"><img src="{{ asset('images/localisation.png') }}" class="iconProfile" alt="La Guadeloupe"/>{{ 'app.index.topbar.guada'|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_rate') }}"><img src="{{ asset('images/reservation.png') }}" class="iconProfile"/>{{ 'app.index.topbar.tarifs'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_rate') }}"><img src="{{ asset('images/reservation.png') }}" class="iconProfile" alt="Tarifs/Réservations"/>{{ 'app.index.topbar.tarifs'|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('app_contact') }}"><img src="{{ asset('images/lettre.png') }}" class="iconProfile"/>{{ 'app.index.topbar.contact'|trans }}</a>
+                    <a class="nav-link" href="{{ path('app_article') }}"><img src="{{ asset('images/ic-newspaper.png') }}" class="iconProfile" alt="Actualités"/>{{ 'app.index.topbar.news'|trans }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_contact') }}"><img src="{{ asset('images/lettre.png') }}" class="iconProfile" alt="Nous contacter"/>{{ 'app.index.topbar.contact'|trans }}</a>
                 </li>
                 {% if is_granted('ROLE_USER') %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://cdn-icons-png.flaticon.com/512/3106/3106773.png" class="iconProfile"/>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu dropdown-menu-end">
                             {% if is_granted('ROLE_ADMIN') %}
-                                <li><a class="dropdown-item" href="{{ path('app_article_new') }}">{{ 'app.index.topbar.article'|trans }}</a></li>
+                                <li><a class="dropdown-item" href="{{ path('app_article_new') }}">{{ 'app.index.topbar.redigerArticle'|trans }}</a></li>
+                                <li><a class="dropdown-item" href="{{ path('app_admin_article_list') }}">{{ 'app.index.topbar.gestionnaireArticles'|trans }}</a></li>
                                 <li><a class="dropdown-item" href="{{ path('app_instagram_settings') }}">{{ 'app.index.topbar.instasettings'|trans }}</a></li>
                             {% endif %}
                             <li><a class="dropdown-item" href="{{ path('app_profile') }}">{{ 'app.index.topbar.profile'|trans }}</a></li>

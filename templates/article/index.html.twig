@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="container">
-        <h1 class="text-center mb-4">Actualités <img src="https://cdn-icons-png.flaticon.com/512/4097/4097354.png" style="width: 50px"></h1>
+        <h1 class="text-center mb-4">Actualités <img src="https://cdn-icons-png.flaticon.com/512/4097/4097354.png" style="width: 50px" alt="news"></h1>
         <div class="row row-cols-1 row-cols-md-3 g-4">
         {% if articles %}
             {% for article in articles %}
@@ -33,35 +33,35 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            {{ article.content|slice(0,200)|raw }}...
+                            <div class="truncate-lines">{{ article.content|raw }}</div>
                             <br/>
                             <div class="button_crud">
                                 {% if is_granted('ROLE_ADMIN') %}
-                                    <a href="{{ path('app_article_edit', {'id': article.id}) }}"><button type="button" class="btn btn-outline-success">Modifier ✏️</button></a>
-                                    <a href="{{ path('app_article_delete', {'id': article.id}) }}"><button type="button" class="btn btn-outline-danger">Supprimer ❌</button></a>
+                                    <a href="{{ path('app_article_edit', {'id': article.id}) }}"><button type="button" class="btn btn-outline-success btn-sm">Modifier ✏️</button></a>
+                                    <a href="{{ path('app_article_delete', {'id': article.id}) }}"><button type="button" class="btn btn-outline-danger btn-sm">Supprimer ❌</button></a>
                                     {% if article.enabled %}
-                                        <a href="{{ path('app_article_enable', {'id': article.id}) }}"><button type="button" class="btn btn-outline-warning">Désactiver 🔴</button></a>
+                                        <a href="{{ path('app_article_enable', {'id': article.id}) }}"><button type="button" class="btn btn-outline-warning btn-sm">Désactiver 🔴</button></a>
                                     {% else %}
-                                        <a href="{{ path('app_article_enable', {'id': article.id}) }}"><button type="button" class="btn btn-outline-primary">Activer 🟢</button></a>
+                                        <a href="{{ path('app_article_enable', {'id': article.id}) }}"><button type="button" class="btn btn-outline-primary btn-sm">Activer 🟢</button></a>
                                     {% endif %}
                                 {% endif %}
-                                <a href="{{ path('app_article_show', {'id': article.id}) }}"><button type="button" class="btn btn-outline-secondary">Voir plus... 🔍</button></a>
                             </div>
                         </div>
                         <div class="card-footer">
                             <small class="tex-muted">{{ article.author }}</small>
                             <small class="text-muted">{{ article.date|date('Y-m-d H:i') }}</small>
+                            <a href="{{ path('app_article_show', {'id': article.id}) }}"><button type="button" class="btn btn-outline-secondary btn-sm">Voir plus... 🔍</button></a>
                         </div>
                     </div>
                 </div>
             {% endfor %}
-            {% if articles|length >= 3 %}
+            {% if articles|length > 3 %}
                 <div class="news">
                     <a href="{{ path('app_article_list') }}"><button type="button" class="btn-news btn btn-secondary">Plus d'actualités</button></a>
                 </div>
             {% endif %}
         {% else %}
-            <h2 class="text-center" style="margin-left: auto; margin-right: auto">Aucun articles publié actuellement.</h2>
+            <h2 class="text-center" style="margin-left: auto; margin-right: auto">Aucun article publié actuellement.</h2>
         {% endif %}
         </div>
     </div>
