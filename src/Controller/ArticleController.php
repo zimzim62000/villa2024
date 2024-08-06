@@ -68,6 +68,17 @@ class ArticleController extends AbstractController
         ]);
     }
 
+    #[Route('/adminArticleList', name: 'app_admin_article_list')]
+    public function adminArticleList(): Response
+    {
+        $articles = $this->entityManager->getRepository(Article::class)->findBy([], ['date'=>'DESC']);
+
+        return $this->render('article/list.html.twig', [
+            'articles' => $articles,
+            'controller_name' => 'ArticleController',
+        ]);
+    }
+
     #[Route('/article/{id}/edit', name: 'app_article_edit')]
     #[IsGranted('ROLE_ADMIN')]
     public function edit(Request $request, Article $article): Response

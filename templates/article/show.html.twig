@@ -8,7 +8,7 @@
     <div class="container">
         <div class="d-flex flex-row justify-content-center">
             {% if article.videoLink %}
-                <iframe width="400" height="200"
+                <iframe width="600" height="300"
                         src="{{ article.videoLink }}">
                 </iframe>
             {% endif %}
@@ -19,7 +19,7 @@
                         Your browser does not support the video tag.
                     </video>
                 {% else %}
-                    <img src="/images/articles/{{ article.imageName }}" alt="{{ article.imageName }}" class="w-50">
+                    <img src="/images/articles/{{ article.imageName }}" alt="{{ article.imageName }}" class="w-25">
                 {% endif %}
             {% endif %}
         </div>

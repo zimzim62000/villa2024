@@ -10,13 +10,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-
-                {% if is_granted('ROLE_ADMIN') %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_article_list') }}"><img src="https://cdn-icons-png.flaticon.com/512/4097/4097354.png" class="iconProfile"/>{{ 'app.index.topbar.news'|trans }}</a>
-                    </li>
-                {% endif %}
                 {#
                 {% if app.request.server.get('INSTAGRAM_ENABLED') is same as('true') %}
                 <li class="nav-item">
@@ -43,7 +36,8 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             {% if is_granted('ROLE_ADMIN') %}
-                                <li><a class="dropdown-item" href="{{ path('app_article_new') }}">{{ 'app.index.topbar.article'|trans }}</a></li>
+                                <li><a class="dropdown-item" href="{{ path('app_article_new') }}">{{ 'app.index.topbar.redigerArticle'|trans }}</a></li>
+                                <li><a class="dropdown-item" href="{{ path('app_admin_article_list') }}">{{ 'app.index.topbar.gestionnaireArticles'|trans }}</a></li>
                                 <li><a class="dropdown-item" href="{{ path('app_instagram_settings') }}">{{ 'app.index.topbar.instasettings'|trans }}</a></li>
                             {% endif %}
                             <li><a class="dropdown-item" href="{{ path('app_profile') }}">{{ 'app.index.topbar.profile'|trans }}</a></li>
