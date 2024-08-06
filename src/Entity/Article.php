@@ -41,7 +41,6 @@ class Article
     private ?string $videoLink = null;
 
     #[ORM\Column(nullable: true)]
-    #[Assert\DateTime]
     private ?\DateTimeImmutable $imageUpdatedAt = null;
 
     #[ORM\Column(length: 1000)]

@@ -109,6 +109,6 @@ class ArticleController extends AbstractController
         $article->setEnabled(!$article->isEnabled());
         $this->entityManager->flush();
 
-        return $this->redirectToRoute('app_article');
+        return $this->redirectToRoute('app_article_list');
     }
 }
