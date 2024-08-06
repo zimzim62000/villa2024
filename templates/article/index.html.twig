@@ -55,7 +55,7 @@
                     </div>
                 </div>
             {% endfor %}
-            {% if articles|length >= 3 %}
+            {% if articles|length > 3 %}
                 <div class="news">
                     <a href="{{ path('app_article_list') }}"><button type="button" class="btn-news btn btn-secondary">Plus d'actualités</button></a>
                 </div>

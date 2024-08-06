@@ -70,6 +70,7 @@ class ArticleController extends AbstractController
     }
 
     #[Route('/adminArticleList', name: 'app_admin_article_list')]
+    #[IsGranted('ROLE_ADMIN')]
     public function adminArticleList(): Response
     {
         $articles = $this->entityManager->getRepository(Article::class)->findBy([], ['date'=>'DESC']);
@@ -112,7 +113,7 @@ class ArticleController extends AbstractController
         $this->entityManager->remove($article);
         $this->entityManager->flush();
 
-        return $this->redirectToRoute('app_article');
+        return $this->redirectToRoute('app_admin_article_list');
     }
 
     #[Route('/article/{id}/enabled', name: 'app_article_enable', methods: ['GET'])]
@@ -122,6 +123,6 @@ class ArticleController extends AbstractController
         $article->setEnabled(!$article->isEnabled());
         $this->entityManager->flush();
 
-        return $this->redirectToRoute('app_article_list');
+        return $this->redirectToRoute('app_admin_article_list');
     }
 }
