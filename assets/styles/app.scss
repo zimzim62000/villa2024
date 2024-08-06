@@ -44,7 +44,7 @@ footer {
 }
 
 .card1{
-    width: 28rem;
+    width: 90%;
 }
 
 .card {
@@ -54,6 +54,12 @@ footer {
     margin-right: auto;
 }
 
+.cardChamber {
+    width: 31rem;
+    @media screen and (max-width: 768px){
+        width: 90%;
+    }
+}
 
 .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -271,13 +277,13 @@ hr {
 
 .cardTerrasse{
     margin-bottom: 30px;
-    width: 30rem;
+    width: 100%;
 }
 
 .colTerrasse{
     text-align: center;
-    @media screen and (max-width: 1550px){
-        width: auto;
+    @media (max-width: 990px){
+        width: 90% !important;
     }
 }
 
@@ -379,21 +385,22 @@ Instagram
 }
 .reservation-button-responsive{
     display: block;
-    @media screen and (min-width: 1550px){
+    @media screen and (min-width: 990px){
         display: none;
     }
-    width: 30rem;
+    width: 90%;
 }
 
 .terrasse-flex-responsive{
-    @media screen and (min-width: 1550px){
+    @media screen and (min-width: 990px){
         flex-direction: row !important;
+        justify-content: center;
     }
 }
 
 .reservation-button{
     display: none;
-    @media screen and (min-width: 1550px){
+    @media screen and (min-width: 990px){
         display: inline-block !important;
     }
 }

@@ -38,6 +38,12 @@
                             <div class="button_crud">
                                 {% if is_granted('ROLE_ADMIN') %}
                                     <a href="{{ path('app_article_edit', {'id': article.id}) }}"><button type="button" class="btn btn-outline-success">Modifier ✏️</button></a>
+                                    <a href="{{ path('app_article_delete', {'id': article.id}) }}"><button type="button" class="btn btn-outline-danger">Supprimer ❌</button></a>
+                                    {% if article.enabled %}
+                                        <a href="{{ path('app_article_enable', {'id': article.id}) }}"><button type="button" class="btn btn-outline-warning">Désactiver 🔴</button></a>
+                                    {% else %}
+                                        <a href="{{ path('app_article_enable', {'id': article.id}) }}"><button type="button" class="btn btn-outline-primary">Activer 🟢</button></a>
+                                    {% endif %}
                                 {% endif %}
                             </div>
                         </div>

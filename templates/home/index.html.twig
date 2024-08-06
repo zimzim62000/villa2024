@@ -22,7 +22,7 @@
         <h4>🏊 {{ 'app.index.piscine'|trans }}</h4>
     </div>
     <div class="row-piscine row align-items-center">
-        <div class="col">
+        <div class="col-md">
             <div class="card1 card">
                 <a href="{{ asset('images/villa_desisree_la_piscine_palmier.jpg') }}"><img
                             src="{{ asset('images/villa_desisree_la_piscine_palmier.jpg') }}" class="card-img-top"
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md">
             <div class="card1 card">
                 <a href="{{ asset('images/villa_desisree_la_piscine_palmier_v2.jpg') }}"><img
                             src="{{ asset('images/villa_desisree_la_piscine_palmier_v2.jpg') }}" class="card-img-top"
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md">
             <div class="card1 card">
                 <a href="{{ asset('images/villa_desisree_la_piscine_palmier_v3.jpg') }}"><img
                             src="{{ asset('images/villa_desisree_la_piscine_palmier_v3.jpg') }}" class="card-img-top"
@@ -76,15 +76,15 @@
         <br>
     </div>
     <div class="row-chambre row align-items-center">
-        <div class="col1 col">
-            <div class="cardChambre1 card" style="width: 31rem;">
+        <div class="col1 col-md">
+            <div class="cardChamber card">
                 <a href="{{ asset('images/chambre_parentale.jpg') }}"><img
                             src="{{ asset('images/chambre_parentale.jpg') }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <p class="card-text">{{ 'app.index.chambrep'|trans|raw }}</p>
                 </div>
             </div>
-            <div class="cardChambre3 card" style="width: 31rem;">
+            <div class="cardChamber card">
                 <a href="{{ asset('images/chambre_mezzanine.jpg') }}"><img
                             src="{{ asset('images/chambre_mezzanine.jpg') }}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="col2 col">
-            <div class="cardChambre2 card" style="width: 34rem;">
+            <div class="cardChamber card">
                 <a href="{{ asset('images/villa_desiree_la_chambre_jaune.jpg') }}"><img
                             src="{{ asset('images/villa_desiree_la_chambre_jaune.jpg') }}" class="card-img-top"
                             alt="..."></a>
@@ -101,7 +101,7 @@
                     <p class="card-text">{{ 'app.index.chambre3'|trans|raw }}</p>
                 </div>
             </div>
-            <div class="cardChambre4 card" style="width: 34rem;">
+            <div class="cardChamber card">
                 <a href="{{ asset('images/chambre_enfant.jpg') }}"><img src="{{ asset('images/chambre_enfant.jpg') }}"
                                                                         class="card-img-top" alt="..."></a>
                 <div class="card-body">
@@ -195,7 +195,7 @@
         <br>
     </div>
     <div class="terrasse-flex-responsive row align-items-center flex-column">
-        <div class="colTerrasse col-lg-4">
+        <div class="col-md-4 colTerrasse">
             <div class="cardTerrasse card">
                 <a href="{{ asset('images/villa_la_table_du_dejeuner_creole.jpg') }}"><img
                             src="{{ asset('images/villa_la_table_du_dejeuner_creole.jpg') }}" class="card-img-top"
@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-        <div class="colTerrasse col-lg-4">
+        <div class="col-md-4 colTerrasse">
             <div class="cardTerrasse card">
                 <a href="{{ asset('images/la_table_de_la_villa_le_soir.jpg') }}"><img
                             src="{{ asset('images/la_table_de_la_villa_le_soir.jpg') }}" class="card-img-top" alt="..."></a>
@@ -215,7 +215,7 @@
             </div>
             <a class="reservation-button btn btn-info btn-lg btn-custom" href={{ path('app_contact') }}>Je réserve !</a>
         </div>
-        <div class="colTerrasse col-lg-4">
+        <div class="col-md-4 colTerrasse">
             <div class="cardTerrasse card">
                 <a href="{{ asset('images/salon_exterieur.jpg') }}"><img src="{{ asset('images/salon_exterieur.jpg') }}"
                                                                          class="card-img-top" alt="..."></a>
