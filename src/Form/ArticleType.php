@@ -3,29 +3,24 @@
 namespace App\Form;
 
 use App\Entity\Article;
-use App\Entity\User;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
-
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class ArticleType extends AbstractType
 {
-    public function __construct(private TokenStorageInterface $tokenStorage){
+    public function __construct(private TokenStorageInterface $tokenStorage) {}
 
-    }
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -73,13 +68,20 @@ class ArticleType extends AbstractType
                 'required' => false
             ])
             ->add('content', CKEditorType::class)
+            ->add('enabled', CheckboxType::class, [
+                'label' => 'Activer l\'article',
+                'attr' => [
+                    'class' => 'form-check-input switch-input'
+                ],
+                'required' => false
+            ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Publier',
                 'attr' => [
                     'class' => 'btn btn-custom',
                 ],
             ])
-            ->addEventListener(FormEvents::PRE_SET_DATA,[$this, 'onPreSetData']);
+            ->addEventListener(FormEvents::PRE_SET_DATA, [$this, 'onPreSetData']);
     }
 
     public function onPreSetData(FormEvent $event)
@@ -97,9 +99,8 @@ class ArticleType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => Article::class
-        ));
+        ]);
     }
-
 }
